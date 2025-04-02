@@ -1,0 +1,10 @@
+.pen-icon, .trash-icon{
+    width: 30px;
+    height: auto;
+}
+
+li{
+    background-color: cadetblue;
+    border-radius: 5px;
+    list-style: none;
+}
