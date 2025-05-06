@@ -46,7 +46,7 @@ function ToDoList() {
         <h1>To-Do-Tasker</h1>
 
         <div>
-            Example tasks:
+            <h2>Example tasks:</h2>
             <button className='add-button' onClick={() => handleExampleTaskClick('Attend conference')}>Attend conference</button>
             <button className='add-button' onClick={() => handleExampleTaskClick('Update documentation')}>Update documentation</button>
             <button className='add-button' onClick={() => handleExampleTaskClick('Debug code issue')}>Debug code issue</button>

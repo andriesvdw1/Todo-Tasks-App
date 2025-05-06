@@ -34,3 +34,8 @@ li {
 input[type="text"] {
     font-size: 18pt;
 }
+.to-do-list{
+    background-color: lightsteelblue;
+    border-radius: 12px;
+    padding: 15px;
+}
