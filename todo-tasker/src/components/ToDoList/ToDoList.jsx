@@ -1,8 +1,13 @@
 import React, {useState} from 'react'
 import './ToDoList.css'
 function ToDoList() {
-    const [tasks, setTasks] = useState(["Wake up", "Drink coffee", "Brush Teeth","Go to Work"]);
+    const [tasks, setTasks] = useState(["Go to work", "Check emails", "Attend meeting","Write today's progress in journal"]);
     const [newTask, setNewTask] = useState("");
+
+    function handleExampleTaskClick(task) {
+        setTasks(t => [...t, task]);
+        setNewTask('');
+      }
 
     function handleInputChange(event){
         setNewTask(event.target.value);
@@ -40,6 +45,12 @@ function ToDoList() {
     <div className='to-do-list'>
         <h1>To-Do-Tasker</h1>
 
+        <div>
+            Example tasks:
+            <button className='add-button' onClick={() => handleExampleTaskClick('Attend conference')}>Attend conference</button>
+            <button className='add-button' onClick={() => handleExampleTaskClick('Update documentation')}>Update documentation</button>
+            <button className='add-button' onClick={() => handleExampleTaskClick('Debug code issue')}>Debug code issue</button>
+        </div>
         <div>
             <input type="text" placeholder='Enter a task...' value={newTask} onChange={handleInputChange} />
             <button className='add-button' onClick={addTask}>Add Task</button>
